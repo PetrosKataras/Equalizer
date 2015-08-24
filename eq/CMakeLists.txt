@@ -179,7 +179,7 @@ endif()
 
 set(EQUALIZER_LINK_LIBRARIES
   PUBLIC EqualizerFabric ${GLEW_LIBRARY} ${EQ_GL_LIBRARIES}
-  PRIVATE EqualizerServer hwsd Pression ${PTHREAD_LIBRARIES}
+  PRIVATE EqualizerServer Pression ${PTHREAD_LIBRARIES}
           ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_FILESYSTEM_LIBRARY}
           ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY})
 
