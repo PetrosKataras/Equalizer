@@ -43,7 +43,7 @@ eq_add_example(eqPly
     vertexShader.glsl
     fragmentShader.glsl
   LINK_LIBRARIES
-    EqualizerAdmin triply Qt5::Widgets ${X11_LIBRARIES}
+    EqualizerAdmin triply ${X11_LIBRARIES}
   )
 
 file(COPY logo.rgb DESTINATION ${CMAKE_BINARY_DIR}/share/Equalizer/data)
