@@ -51,7 +51,7 @@ class Pipe : public fabric::Pipe< Node, Pipe, eq::Window, PipeVisitor >
 {
 public:
     /** Construct a new pipe. @version 1.0 */
-    EQ_API Pipe( Node* parent );
+    EQ_API explicit Pipe( Node* parent );
 
     /** Destruct the pipe. @version 1.0 */
     EQ_API virtual ~Pipe();
@@ -147,7 +147,7 @@ public:
      * @param frameNumber the frame number.
      * @sa releaseFrame()
      */
-    EQ_API void waitFrameFinished( const uint32_t frameNumber ) const;
+    EQ_API void waitFrameFinished( const uint32_t frameNumber );
 
     /**
      * Send a pipe error event to the application node.
