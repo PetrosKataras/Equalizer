@@ -250,6 +250,9 @@ public:
      */
     SEQ_API uint32_t getWindowID() const;
     //@}
+    
+    /** @return true when core profile is enabled. @version 1.8 */ 
+    SEQ_API bool useCoreProfile() const;
 
     /** @name Distributed Object API */
     //@{
@@ -283,7 +286,6 @@ public:
     SEQ_API bool unmap( co::Object* object );
     //@}
 
-    SEQ_API bool useCoreProfile() const;
 private:
     detail::Renderer* const _impl;
     Application& app_;
