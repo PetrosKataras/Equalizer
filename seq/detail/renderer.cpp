@@ -104,6 +104,22 @@ const PixelViewport& Renderer::getPixelViewport() const
     return _channel ? _channel->getPixelViewport() : nullPVP;
 }
 
+const PixelViewport& Renderer::getWindowPixelViewport() const
+{
+    LBASSERT( _window );
+    static const PixelViewport nullPVP;
+    return _window ? _window->getPixelViewport() : nullPVP;
+}
+
+bool Renderer::useCoreProfile() const
+{
+    LBASSERT( _window );
+    const bool coreProfile = _window->getIAttribute(
+                eq::WindowSettings::IATTR_HINT_CORE_PROFILE ) == eq::ON;
+    
+    return coreProfile;
+}
+
 bool Renderer::useOrtho() const
 {
     LBASSERT( _channel );

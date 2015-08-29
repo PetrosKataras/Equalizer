@@ -88,6 +88,11 @@ const PixelViewport& Renderer::getPixelViewport() const
     return _impl->getPixelViewport();
 }
 
+const PixelViewport& Renderer::getWindowPixelViewport() const
+{
+    return _impl->getWindowPixelViewport();
+}
+
 uint32_t Renderer::getWindowID() const
 {
     const eq::Window* window = _impl->getWindow();
@@ -177,6 +182,11 @@ void Renderer::applyScreenFrustum()
 void Renderer::applyPerspectiveFrustum()
 {
     _impl->applyPerspectiveFrustum();
+}
+
+bool Renderer::useCoreProfile() const
+{
+    return _impl->useCoreProfile();
 }
 
 co::Object* Renderer::createObject( const uint32_t type )

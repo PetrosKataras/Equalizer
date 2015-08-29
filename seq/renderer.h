@@ -25,6 +25,7 @@
 
 namespace seq
 {
+
 /**
  * A renderer instance.
  *
@@ -240,6 +241,9 @@ public:
     /** @return the current rendering area. @version 1.8 */
     SEQ_API const PixelViewport& getPixelViewport() const;
 
+    /** @return the current window pixel viewport. @version 1.8 */
+    SEQ_API const PixelViewport& getWindowPixelViewport() const;
+
     /**
      * @return a unique, stable identifier for the current window.
      * @version 1.8
@@ -279,6 +283,7 @@ public:
     SEQ_API bool unmap( co::Object* object );
     //@}
 
+    SEQ_API bool useCoreProfile() const;
 private:
     detail::Renderer* const _impl;
     Application& app_;

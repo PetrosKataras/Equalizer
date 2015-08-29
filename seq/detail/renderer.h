@@ -46,9 +46,11 @@ public:
     const Matrix4f& getViewMatrix() const;
     const Matrix4f& getModelMatrix() const;
     const PixelViewport& getPixelViewport() const;
+    const PixelViewport& getWindowPixelViewport() const;
 
     bool useOrtho() const;
     void setNearFar( const float nearPlane, const float farPlane );
+    bool useCoreProfile() const;
     //@}
 
     /** @name Current context. */
